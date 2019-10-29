@@ -7,3 +7,5 @@ rm(r)
 
 # install RPostgreSQL
 install.packages("RPostgreSQL")
+install.packages("tidyverse")
+install.packages("jsonlite")
