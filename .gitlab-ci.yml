@@ -4,9 +4,9 @@ stages:
 build_docker:
   stage: docker_image
   script:
-    - docker build -t ${CI_REGISTRY_IMAGE}/cdt-docker .
+    - docker build -t ${CI_REGISTRY_IMAGE} .
     - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
-    - docker push ${CI_REGISTRY_IMAGE}/cdt-docker
+    - docker push ${CI_REGISTRY_IMAGE} 
   tags:
     - executor:docker
   only:
