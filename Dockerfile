@@ -24,3 +24,7 @@ COPY install.r /
 # install it
 RUN ["R", "CMD", "INSTALL", "wrangleR_1.7.tar.gz"]
 RUN ["Rscript", "install.r"]
+
+# get versions
+RUN python --version
+RUN R --version
