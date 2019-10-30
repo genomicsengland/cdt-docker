@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y libpq-dev
 RUN apt-get update && apt-get install -y python3.6
 
 # Install r-base
-RUN apt-get update && apt-get install software-properties-common
+RUN apt-get update && apt-get install -y software-properties-common
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 RUN add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'
 RUN apt-get update && apt-get install -y r-base=3.6.1*
