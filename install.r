@@ -5,7 +5,5 @@ r["CRAN"] = "http://cran.fhcrc.org/"
 options(repos = r)
 rm(r)
 
-# install RPostgreSQL
-install.packages("RPostgreSQL")
-install.packages("tidyverse")
+# install jsonlite which is a dependency for wrangleR
 install.packages("jsonlite")
