@@ -24,6 +24,9 @@ COPY install.r /
 # install it
 RUN ["R", "CMD", "INSTALL", "wrangleR_1.7.tar.gz"]
 RUN ["Rscript", "install.r"]
+# delete the files from image
+RUN ["rm", "wrangleR_1.7.tar.gz"]
+RUN ["rm", "install.r"]
 
 # get versions
 RUN python3 --version
