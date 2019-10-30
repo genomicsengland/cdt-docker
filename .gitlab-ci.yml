@@ -4,9 +4,11 @@ stages:
 build_docker:
   stage: docker_image
   script:
-    - docker build -t ${CI_REGISTRY_IMAGE} .
+    - docker build -t ${CI_REGISTRY_IMAGE}:latest -t ${CI_REGISTRY_IMAGE}:${current_version} .
     - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
     - docker push ${CI_REGISTRY_IMAGE} 
+  variables:
+    current_version: $(git describe --tags `git rev-list --tags --max-count=1`)
   tags:
     - executor:docker
   only:
