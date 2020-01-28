@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y libpq-dev
 
 # Install python 3.6 and pip
 RUN apt-get update && apt-get install -y python3.6
-RUN apt-get update && apt-get install python-pip
+RUN apt-get update && apt-get install -y python-pip
 
 # Install r-base3.6.1
 # need to set noninteractive install so doesn't hang during installation of tzdata
